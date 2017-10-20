@@ -1,0 +1,158 @@
+extends layout
+
+block content
+  // Cities top
+  .row
+    // Main banner background image
+    .mainbanner.city
+      .col-md-6.col-11.m-auto.text-center.big-padding-vertical
+        h1 Discover & book wine tastings
+      // Search module container
+      .col-md-4.col-11.mx-auto.search
+        .search-inner.text-center
+          .form-group
+            .region
+              input(type='text', class='form-control', placeholder='All Regions', autocomplete='false', required='required')
+            .row.align-items-start
+              .col-md-4
+                .filter
+                  select.select.form-control
+                    option(value='0') variety
+                    option(value='1') option 2
+                    option(value='2') option 3
+                    option(value='3') option 4
+                    i.fa.fa-chevron-down
+              .col-md-5.ml-auto
+                .filter
+                  select.select.form-control
+                    option(value='0') more filters
+                    option(value='1') option 2
+                    option(value='2') option 3
+                    option(value='3') option 4
+                    i.fa.fa-chevron-down
+          .col-12.mx-auto
+            .btn.btn-red search
+          .col-md-8.col-12.mx-auto.mt-3
+            a.btn.btn-border-white(href="/") Search by location
+  // Cities listing grid
+  .container.listing.city.my-5.big-padding-vertical
+    .row
+      // Single city
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name California, CA
+            // City number of wineries
+            p.location <strong>30</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name San Francisco, CA
+            // City number of wineries
+            p.location <strong>60</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name California, CA
+            // City number of wineries
+            p.location <strong>30</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name San Francisco, CA
+            // City number of wineries
+            p.location <strong>60</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name California, CA
+            // City number of wineries
+            p.location <strong>30</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name San Francisco, CA
+            // City number of wineries
+            p.location <strong>60</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name California, CA
+            // City number of wineries
+            p.location <strong>30</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample1.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name San Francisco, CA
+            // City number of wineries
+            p.location <strong>60</strong> Wineries
+      .col-md-4.col-sm-6.col-12.my-4
+        .col-11.mx-auto
+          // Glowing shadow image (same as city image)
+          img(src='./assets/img/location-sample.jpg', class='img-fluid shadow')
+        .col-11.mx-auto.region.city
+          // City image
+          img(src='./assets/img/location-sample.jpg', class='img-fluid')
+          .layer
+          .info
+            // City info
+            p.name California, CA
+            // City number of wineries
+            p.location <strong>30</strong> Wineries
+        
