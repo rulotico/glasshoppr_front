@@ -1,0 +1,126 @@
+.banner-img
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%), url('../images/bg-sample.jpg') no-repeat center
+  background-size: cover
+  vertical-align: top
+  width: 100%
+  height: 106px
+  display: table
+  p
+    font-size: $xxlarge
+    font-weight: 700
+    color: $white
+    padding: 0
+    display: table-cell
+    text-shadow: 1px 1px 4px #000
+    vertical-align: middle
+
+.rate
+  background: #f5f5f9
+  h2.winery-name
+    font-size: $xxlarge
+    font-weight: 700
+    color: $blue
+    padding: 0 0 15px
+    margin-bottom: 15px
+    span
+      margin-top: 8px
+      display: block
+      font-weight: 400
+      font-size: $medium
+      color: $gray
+      text-decoration: underline
+  h2.recommend
+    font-size: $xlarge
+    font-weight: 700
+    color: $red
+    padding: 0 0 23px
+  .thumbs
+    color: #f8f9fb
+    border-radius: 2px
+    margin: 0 25px
+    background-color: #ad000e
+    display: inline-block
+    transition: all .7s ease-in-out
+    a
+      text-decoration: none
+      color: #f8f9fb
+      display: block
+      padding: 12px 20px 10px
+    &:active
+      background-color: #ad000e
+      color: rgba(239, 236, 236, 0.79)
+    &:hover, &:focus
+      box-shadow: 0px 0px 5px 0px rgba(35, 35, 35, 0.6)
+      background-color: $red
+  .categories
+    padding-top: 30px
+    p
+      margin-bottom: 5px
+      font-weight: 700
+      color: $gray
+      font-size: $medium
+  .rank
+    padding-top: 30px
+    .group
+      display: block
+      font-size: 10px
+      clear: both
+      fieldset, label
+        margin: 0
+        padding: 0
+      .rating
+        border: none
+        display: block
+        float: left
+        >
+          input
+            display: none
+          label:before
+            margin: 4px 5px
+            font-size: 1.25em
+            font-family: FontAwesome
+            display: inline-block
+            content: url('../images/glass.png')
+          label
+            cursor: pointer
+            opacity: 0.65
+            float: right
+          input:checked ~ label
+            opacity: 1
+        &:not(:checked) > label:hover
+          opacity: 1
+          ~ label
+            opacity: 1
+        >
+          input:checked
+            + label:hover, ~ label:hover
+              opacity: 0.9
+          label:hover ~ input:checked ~ label, input:checked ~ label:hover ~ label
+            opacity: 0.9
+  .review
+    textarea.form-control
+      position: relative
+      padding: .5rem 0
+      font-weight: 700
+      border-bottom: 2px solid rgba(142, 160, 172, 0.48)
+      color: $blue
+      margin-top: 1rem
+      font-size: $medium
+      &:focus, &:active
+        background: transparent
+        border: none
+        border-bottom: 2px solid $blue
+        border-radius: 0
+        color: $blue
+        font-weight: 700
+        &::placeholder
+          color: $blue
+      &::placeholder
+        color: $gray
+        font-weight: 700
+        transition: all .5s linear
+      &:focus + .region
+        color: $blue
+  .btn.btn-red
+    margin-bottom: 0
+    margin-top: 15px

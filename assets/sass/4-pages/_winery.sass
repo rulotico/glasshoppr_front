@@ -1,0 +1,419 @@
+// top banner winerie
+.topbanner.winerie
+  cursor: pointer
+  width: 100%
+  // background: url('../images/sample1.jpg') no-repeat 50% fixed / cover
+  background-color: #000
+  position: relative
+  transition: height .5s ease-out
+  height: 358px
+  #cycler
+    position: relative
+    img
+      position: absolute
+      width: 100%
+      height: 99.5vh
+      object-fit: cover
+      z-index: 1
+    img.active
+      z-index: 3
+  @media screen and (max-width: $break-medium)
+    height: 520px
+  // generated navdots
+  .navdots
+    padding: 5px 0
+    bottom: 0
+    position: relative
+    left: 0
+    .navdot
+      width: 12px
+      height: 12px
+      background-color: transparent
+      margin: 0 5px
+      border: 2px solid $white
+      border-radius: 50%
+      display: inline-block
+      cursor: pointer
+    .navdot.active
+      background-color: $white
+  // reservation module
+  .book
+    &::before
+      content: ''
+      position: absolute
+      height: 220px
+      width: 100%
+      background: url('../images/sample1.jpg') no-repeat 50% fixed / cover
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      filter: blur(15px)
+      transition: all .3s ease-out
+      @media screen and (max-width: $break-medium)
+        height: 250px
+    background: hsla(0, 0%, 65%, 0.95)
+    border-radius: 4px
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    right: 10%
+    margin-top: 11%
+    color: $white
+    // bottom: -20%
+    overflow: hidden
+    transition: all .5s ease-out
+    @media screen and (max-width: $break-medium)
+      right: 4%
+      margin-top: 65%
+      // bottom: -10%
+
+    .book-inner
+      padding: 20px 30px
+      h4.book-title
+        position: relative
+        text-transform: uppercase
+        font-weight: 700
+        color: white
+        letter-spacing: 1px
+      .date
+        p
+          margin-bottom: 0
+          color: white
+          font-size: 26px
+          font-weight: 700
+          span
+            font-size: 12px
+            text-transform: uppercase
+            font-weight: 400
+          span.fa
+            color: white
+            font-size: 26px
+            font-weight: 700
+      .separator
+        border-left: 2px solid rgba(255, 255, 255, 0.2)
+        border-right: 2px solid rgba(255, 255, 255, 0.2)
+      .schedule
+        position: relative
+        border-top: 2px solid rgba(255, 255, 255, 0.2)
+        margin-top: 10px
+        padding: 15px 0
+        h4.book-title
+          position: relative
+          text-transform: uppercase
+          font-weight: 700
+          color: $white
+          letter-spacing: 1px
+          margin-bottom: 20px
+        p
+          text-transform: uppercase
+          color: $white
+          letter-spacing: 1px
+          margin: 0 auto 7px
+        p.selected
+          font-weight: 700
+        .btn-border-white.hour
+          width: 100%
+          margin: 8px
+          font-size: 15px
+          font-weight: 400
+          padding: 5px 0 2px
+          &:hover, &:focus, &:active
+            background: $bgblue
+            border: 1px solid $bgblue
+          &:disabled
+            cursor: not-allowed
+            color: rgba(255, 255, 255, 0.4)
+            border: 1px solid rgba(255, 255, 255, 0.4)
+            &:hover
+              background: transparent
+  .book.expand
+    margin-top: 65%
+    @media screen and (max-width: $break-medium)
+      margin-top: 140%
+    &::before
+      height: 0
+  .book.blue
+    background: rgba(43, 56, 71, 0.9)
+    &::before
+      filter: blur(80px)
+  .book.blue.expand
+    margin-top: 65%
+    @media screen and (max-width: $break-medium)
+      margin-top: 140%
+    &::before
+      height: 0
+  .layer
+    background: rgba(0, 0, 0, 0.3)
+    background: -webkit-linear-gradient(top, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+    background: -o-linear-gradient(bottom, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+    background: -moz-linear-gradient(bottom, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+    background: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+    z-index: 0
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 358px
+    transition: height .5s ease-out
+    @media screen and (max-width: $break-medium)
+      background: rgba(0, 0, 0, 0.3)
+      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))
+      background: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))
+      background: -moz-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))
+      height: 520px
+  .layer.expand
+    height: 99.5vh
+  .info
+    position: absolute
+    bottom: 5px
+    transition: bottom .3s ease-out, top .3s ease-out
+    @media screen and (max-width: $break-medium)
+      top: 30%
+    p, h1
+      color: $white
+    p
+      font-size: $regular
+      line-height: 22px
+    h1.winerie
+      font-weight: 700
+    p.address
+      font-size: $normal
+      text-decoration: underline
+    p.social, p.is_open, p.is_closed, .favorite
+      display: inline-block
+      margin-right: 20px
+    p.is_open, p.is_closed
+      text-transform: uppercase
+      font-weight: 700
+    p.is_open
+      span
+        display: inline-block
+        width: 11px
+        height: 11px
+        margin: 0 2px -1px 0
+        background-color: #af0
+        border-radius: 50%
+        box-shadow: #000 0 -1px 7px 1px, inset #6da201 0 -1px 9px, #7D0 0 2px 12px
+    p.is_closed
+      span
+        display: inline-block
+        width: 11px
+        height: 11px
+        margin: 0 2px -1px 0
+        background-color: #993800
+        border-radius: 50%
+        box-shadow: #000 0 -1px 7px 1px, inset #d20404 0 -1px 9px, #F00 0 2px 12px
+  .info.expand
+    transition: bottom .3s ease-out, top .3s ease-out
+    @media screen and (max-width: $break-medium)
+      bottom: 5px
+      top: auto
+.topbanner.winerie.expand
+  height: 99.5vh
+
+// winerie information & reviews
+.winerie-info.down
+  @media screen and (max-width: $break-medium)
+    padding-top: 19rem
+.winerie-info
+  padding-top: 8rem
+  transition: all .3s ease
+  .info
+    background: #f5f5f9
+    border-radius: 6px
+    padding: 20px 15px
+    ul.tabs
+      margin: 0px
+      padding: 0px
+      list-style: none
+      li.tab-link
+        background: none
+        color: $gray
+        display: inline-block
+        padding: 10px 15px
+        cursor: pointer
+        font-weight: 700
+        font-size: $medium
+        text-align: center
+        @media screen and (max-width: $break-medium)
+          font-size: 15px
+      li.current
+        background: none
+        color: $red
+    .tab-content
+      border-top: 2px solid  #b9c4cc
+      display: none
+      background: #f5f5f9
+      padding: 15px
+      color: $blue
+      .bio
+        table
+          margin: 1rem 0 0
+          @media screen and (max-width: $break-medium)
+            margin: 0
+        .table td, .table th
+          border-top: none
+          padding: .1rem
+        .section > h6
+          font-size: $regular
+          color: $gray
+          margin-top: 5px
+          text-transform: capitalize
+        .desc
+          p, a
+            color: $blue
+            font-weight: 700
+            font-size: $normal
+          a
+            text-decoration: underline
+            &:hover, &:focus
+              color: $blue
+            &:active
+              color: $red
+        .attributes
+          margin-bottom: 25px
+          @media screen and (max-width: $break-medium)
+            margin-top: 10px
+          .tags
+            p
+              display: inline-block
+              background: $bgblue
+              color: $bgwhite
+              text-transform: capitalize
+              padding: 5px 10px 3px
+              border-radius: 15px
+              font-size: 13px
+              margin: 10px 10px 0 0
+        .more
+          h6, p
+            color: $blue
+            font-weight: 700
+            font-size: $normal
+          p
+            display: inline-block
+            margin-bottom: 5px
+            margin-right: 8px
+            @media screen and (max-width: $break-medium)
+              display: block
+            span
+              font-size: $regular
+              color: $gray
+              margin: 5px 8px 0 0
+              text-transform: capitalize
+      .wines
+        table
+          margin: 1rem 0 0
+          @media screen and (max-width: $break-medium)
+            margin: 0
+          thead
+            th
+              border-bottom: none
+              font-size: $regular
+              color: $gray
+              text-transform: uppercase
+              font-weight: 700
+        .table td, .table th
+          border-top: none
+          padding: 1rem 1.5rem .1rem 0
+        .table td
+          font-size: $regular
+          &:last-child
+            padding: 1rem 0 .1rem 0
+    .tab-content.current
+      display: inherit
+  .reviews
+    transition: all .3s ease-out
+    h6
+      color: $blue
+      font-weight: 700
+      font-size: $medium
+    .review
+      border-bottom: 2px solid #bec9cf
+      padding: 25px 0
+      .user-pic
+        img
+          border-radius: 50%
+          width: 50px
+          height: 50px
+          object-fit: cover
+      .user-comment
+        p
+          font-size: $regular
+          margin-bottom: 0
+        p.user-name
+          font-size: $normal
+          font-weight: 700
+  .reviews.down
+    position: relative
+    margin-top: 18%
+
+// Wineries listing grid
+.listing.winerie
+  h6
+    color: $blue
+    font-weight: 700
+    font-size: $normal
+  img.shadow
+    position: absolute
+    z-index: -2
+    object-fit: cover
+    width: 95%
+    height: 205px
+    -webkit-filter: blur(10px)
+    margin-left: -7px
+    top: 10px
+  .winerie.winerie
+    height: 210px
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    &:hover
+      img
+        -moz-transform: scale(1.1)
+        -webkit-transform: scale(1.1)
+        transform: scale(1.1)
+    &:active
+      img
+        -moz-transform: scale(1)
+        -webkit-transform: scale(1)
+        transform: scale(1)
+    img
+      position: absolute
+      z-index: -1
+      margin-left: -15px
+      object-fit: cover
+      width: 100%
+      height: 100%
+      -moz-transition: all 0.3s ease
+      -webkit-transition: all 0.3s ease
+      transition: all 0.3s ease
+    .layer
+      background: rgba(0, 0, 0, 0.3)
+      background: -webkit-linear-gradient(top, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      background: -o-linear-gradient(bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      background: -moz-linear-gradient(bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      background: linear-gradient(to bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      z-index: 0
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 100%
+      height: 100%
+    .info
+      padding: 0 15px
+      bottom: 0
+      position: absolute
+      z-index: 1
+      p.name
+        color: $white
+        margin-bottom: 0
+        font-weight: 700
+        font-size: $medium
+        line-height: 18px
+      p.location
+        color: $white
+        font-weight: 400
+        font-size: $regular
+        line-height: 22px

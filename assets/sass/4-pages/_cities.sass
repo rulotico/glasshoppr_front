@@ -1,0 +1,156 @@
+// main banner index background image
+.mainbanner.city
+  width: 100%
+  background: url('../images/location-sample1.jpg') no-repeat 50% fixed / cover
+  position: relative
+  // search module
+  .search
+    &::before
+      content: ''
+      position: absolute
+      height: 185px
+      width: 100%
+      background: url('../images/location-sample1.jpg') no-repeat 50% fixed / cover
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      filter: blur(20px)
+      @media screen and (max-width: $break-medium)
+        height: auto
+    // bottom: -300px
+    // background: rgba(0, 0, 0, 0.75)
+    background: hsla(0, 0%, 65%, 0.95)
+    border-radius: 4px
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+    bottom: -18%
+    @media screen and (max-width: $break-medium)
+      bottom: 5%
+    .search-inner
+      padding: 20px 30px
+      .region
+        position: relative
+        &::before
+          color: rgba(239, 236, 236, 0.87)
+          content: "\f041"
+          font-family: 'FontAwesome'
+          position: absolute
+          top: -5px
+          left: 10px
+          font-size: 24px
+          transition: all .5s linear
+        input[type=text].form-control
+          padding-left: 35px
+          font-weight: 700
+          color: $white
+          &:focus, &:active
+            background: transparent
+            border: none
+            border-bottom: 2px solid $white
+            border-radius: 0
+            color: $white
+            &::placeholder
+              color: $white
+          &::placeholder
+            color: rgba(239, 236, 236, 0.58)
+            font-weight: 700
+            transition: all .5s linear
+          &:focus + .region
+            color: $white
+      .filter
+        position: relative
+        select
+          cursor: pointer
+          background: transparent
+          color: rgba(239, 236, 236, 0.88)
+          text-transform: uppercase
+          font-size: 10px
+          letter-spacing: 1px
+          border: none
+          -webkit-appearance: none
+        select option
+          margin: 40px
+          background-color: rgba(0, 0, 0, 0.7)
+          color: #fff
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4)
+        &::after
+          content: "\f078"
+          font-family: 'FontAwesome'
+          position: absolute
+          top: 9px
+          right: 6px
+          font-size: 12px
+          color: rgba(239, 236, 236, 0.88)
+          transition: all .5s linear
+
+// Wineries listing grid
+.listing.city
+  img.shadow
+    position: absolute
+    z-index: -2
+    object-fit: cover
+    width: 95%
+    height: 205px
+    -webkit-filter: blur(10px)
+    margin-left: -7px
+    top: 10px
+  .region.city
+    height: 210px
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    &:hover
+      img
+        -moz-transform: scale(1.1)
+        -webkit-transform: scale(1.1)
+        transform: scale(1.1)
+    &:active
+      img
+        -moz-transform: scale(1)
+        -webkit-transform: scale(1)
+        transform: scale(1)
+    img
+      position: absolute
+      z-index: -1
+      margin-left: -15px
+      object-fit: cover
+      width: 100%
+      height: 100%
+      -moz-transition: all 0.3s
+      -webkit-transition: all 0.3s
+      transition: all 0.3s
+      border-radius: 3px
+    .layer
+      background: rgba(0, 0, 0, 0.3)
+      background: -webkit-linear-gradient(top, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      background: -o-linear-gradient(bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      background: -moz-linear-gradient(bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      background: linear-gradient(to bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+      z-index: 0
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 100%
+      height: 100%
+      border-radius: 3px
+    .info
+      padding: 0 15px
+      bottom: 0
+      position: absolute
+      z-index: 1
+      p.name
+        color: $white
+        margin-bottom: 0
+        font-weight: 700
+        font-size: $medium
+        line-height: 18px
+      p.location
+        color: $white
+        font-weight: 400
+        font-size: $regular
+        line-height: 22px

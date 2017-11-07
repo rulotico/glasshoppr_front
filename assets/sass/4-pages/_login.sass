@@ -1,0 +1,36 @@
+.mainlogin
+  display: block
+  width: 100%
+  background: url('../images/userbg-sample.jpg') no-repeat 50% fixed / cover
+  background-color: #000
+  position: relative
+  height: 100vh
+  padding-top: 58px
+  .login-module
+    position: relative
+    padding: 30px 40px
+    margin-top: 14vh
+    background: rgba(43, 56, 71, 0.6)
+    border-radius: 5px
+    color: $white
+    height: auto
+    overflow: hidden
+    transition: all .5s ease-out
+    &::before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 100%
+      background: url('../images/userbg-sample.jpg') no-repeat 50% fixed / cover
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      filter: blur(30px)
+      opacity: 0.98
+    h2.section-title
+      position: relative
+      color: $white
+      font-size: $medium
+      font-weight: 700
+      margin-bottom: 30px

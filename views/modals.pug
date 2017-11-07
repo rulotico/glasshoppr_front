@@ -1,0 +1,142 @@
+//- Sign in (login) modal
+#wsignin.modal.fade(tabindex='-1', role='dialog', aria-labelledby='wsigninLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-body
+        //- button.close(type='button', data-dismiss='modal', aria-label='Close')
+        //-   span(aria-hidden='true') ×
+        h4#wsigninLabel.modal-title you need to sign in
+        .form-group
+          input(type='email', class='form-control', placeholder='Email', autocomplete='false', required='required')
+        .form-group
+          input(type='password', class='form-control', placeholder='Password', autocomplete='false', required='required')
+        .row
+          .col-12
+            .btn.btn-facebook login with facebook
+          .col-12.text-center
+            .btn.btn-red sign in
+            a.simple(href='#', data-toggle='modal', data-target='#wsignup', data-dismiss='modal', aria-label='Close') Create account
+
+//- Sign un (registration) modal
+#wsignup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='wsignupLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-header
+      .row
+        .col-12
+          h1#wsignupLabel.winerie Bodegas YSIOS
+        .col-12
+          p.address 7438 Blix St, San Diego, CA, 92111
+    .modal-content
+      .modal-body
+        .book-inner
+          .container-fluid
+            .row
+              .col-4.date.text-center.py-3
+                p 20 MAY<br><span class="fa fa-calendar" aria-hidden="true"></span>
+              .col-4.date.text-center.separator.py-3
+                p 9:30<span>pm</span><br><span class="fa fa-clock-o" aria-hidden="true"></span>
+              .col-4.date.text-center.py-3
+                p 5<br><span class="fa fa-user" aria-hidden="true"></span>
+        .form-winery
+          .row
+            .col-md-6.col-12
+              .modal-title almost there!
+            .col-md-6.col-12.text-right
+              a.simple(href='#', data-toggle='modal', data-target='#wsignin', data-dismiss='modal', aria-label='Close') Already a Member?
+          .form-group
+            input(type='text', class='form-control', placeholder='Name & Last Name', autocomplete='false', required='required')
+          .form-group
+            input(type='email', class='form-control', placeholder='Email', autocomplete='false', required='required')
+          .form-group
+            .container-fluid
+              .row
+                .col-2.nosidepadding
+                  input(type='text', class='form-control', placeholder='US', value="US", autocomplete='false', required='required')
+                .col-10.pr-0
+                  input(type='tel', onkeypress="return event.charCode >= 48 && event.charCode <= 57", class='form-control', placeholder='Phone', autocomplete='false', required='required')
+          .form-group
+            input(type='password', class='form-control', placeholder='Password', autocomplete='false', required='required')
+          .row
+            .col-12.mt-2
+              .btn.btn-white(type='button', data-toggle='modal', data-target='#wpaidreservaton', data-dismiss='modal', aria-label='Close') submit
+
+//- Paid reservation modal
+#wpaidreservaton.modal.fade(tabindex='-1', role='dialog', aria-labelledby='wpaidreservatonLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-header
+      .row
+        .col-12
+          h1#wpaidreservatonLabel.winerie Bodegas YSIOS
+        .col-12
+          p.address 7438 Blix St, San Diego, CA, 92111
+    .modal-content
+      .modal-body
+        .book-inner
+          .container-fluid
+            .row
+              .col-4.date.text-center.py-3
+                p 20 MAY<br><span class="fa fa-calendar" aria-hidden="true"></span>
+              .col-4.date.text-center.separator.py-3
+                p 9:30<span>pm</span><br><span class="fa fa-clock-o" aria-hidden="true"></span>
+              .col-4.date.text-center.py-3
+                p 5<br><span class="fa fa-user" aria-hidden="true"></span>
+        .form-winery
+          .modal-title almost there!
+          .form-group
+            input(type='text', class='form-control', placeholder='Name & Last Name', value="Edgar Lozano" autocomplete='false', required='required')
+          .form-group
+            .container-fluid
+              .row
+                .col-6.nosidepadding
+                  input(type='text', onkeypress="return event.charCode >= 48 && event.charCode <= 57", maxlength="15", class='form-control', placeholder='1234 5678 9123 4567', autocomplete='false', required='required')
+                .col-3
+                  input(type='text', onkeypress="return event.charCode >= 48 && event.charCode <= 57", maxlength="4", class='form-control', placeholder='CVC', autocomplete='false', required='required')
+                .col-3.nosidepadding
+                  input(type='text', onkeypress="return event.charCode >= 48 && event.charCode <= 57", maxlength="5", id="inputDate", class='form-control', placeholder='MM/YY', autocomplete='false', required='required')
+          .row
+            .col-12.mt-2
+              .btn.btn-white(type='button', data-toggle='modal', data-target='#wsuccess', data-dismiss='modal', aria-label='Close') submit
+
+//- reservation success modal
+#wsuccess.modal.fade(tabindex='-1', role='dialog', aria-labelledby='wsuccessLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-header
+      .row.justify-content-center.mx-auto
+        .col.icon.my-auto
+          img(src="/images/success.svg" class="img-fluid")
+        .col.success.my-auto
+          h2.success Success
+    .modal-content
+      .modal-body
+        .row
+          .col-12.mt-3.pt-3
+            h1.winerie Bodegas YSIOS
+          .col-12
+            p.address 7438 Blix St, San Diego, CA, 92111
+        .book-inner
+          .container-fluid
+            .row
+              .col-4.date.text-center.py-3
+                p 20 MAY<br><span class="fa fa-calendar" aria-hidden="true"></span>
+              .col-4.date.text-center.separator.py-3
+                p 9:30<span>pm</span><br><span class="fa fa-clock-o" aria-hidden="true"></span>
+              .col-4.date.text-center.py-3
+                p 5<br><span class="fa fa-user" aria-hidden="true"></span>
+        .success-winery
+          .row
+            .col-12
+              h2.to reserved to:
+              p.name Edgar Lozano
+              p.email edgar@example.com
+        .row
+          .col-12.my-3.py-3.text-center
+            a.btn-border-red(href="#", data-dismiss='modal', aria-label='Close') Save in calendar
+        .row
+          .col-12.social.text-center
+            hr
+            a(href='#', target='_blank') #[span(class='fa fa-facebook-official')]
+            a(href='#', target='_blank') #[span(class='fa fa-twitter')]
+            a(href='#', target='_blank') #[span(class='fa fa-envelope-o')]
+    .modal-footer
+      a(href='#') More reservations
+            

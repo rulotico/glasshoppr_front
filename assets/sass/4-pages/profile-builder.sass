@@ -1,0 +1,122 @@
+.builder
+  display: block
+  width: 100%
+  background: url('../images/userbg-sample.jpg') no-repeat 50% fixed / cover
+  background-color: #000
+  position: relative
+  height: 100vh
+  padding-top: 58px
+  .user
+    position: absolute
+    z-index: 1
+    margin-top: -5vh
+    margin-left: -15px
+    .user-pic
+      img
+        border-radius: 50%
+        width: 100%
+        height: 100%
+        object-fit: cover
+  .p-builder
+    position: relative
+    padding: 50px 40px 10px
+    margin-top: 14vh
+    background: rgba(43, 56, 71, 0.6)
+    border-radius: 5px
+    color: $white
+    height: auto
+    min-height: 65vh
+    overflow: hidden
+    transition: all .5s ease-out
+    &::before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 100%
+      background: url('../images/userbg-sample.jpg') no-repeat 50% fixed / cover
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      filter: blur(30px)
+      opacity: 0.98
+    h2.section-title
+      color: $white
+      font-size: $large
+      font-weight: 700
+      letter-spacing: 1px
+      z-index: 2
+    .progress
+      padding: 5px 0
+      position: relative
+      background: transparent
+      float: right
+      z-index: 2
+      &::after
+        clear: both
+      .dot
+        width: 15px
+        height: 15px
+        background-color: transparent
+        margin: 0 5px
+        border: 2px solid $white
+        border-radius: 50%
+        display: inline-block
+        cursor: pointer
+        transition: all .6s ease-in-out
+        &:hover
+          background-color: $white
+      .dot.active
+        background-color: $white
+    .options
+      margin-top: 10%
+      display: flex
+      .button-group
+        position: relative
+        vertical-align: middle
+        width: 100%
+        .btn-border-white.checks
+          background: transparent
+          color: #fff
+          border: 1px solid #fff
+          font-weight: 400
+          text-transform: capitalize
+          border-radius: 20px
+          cursor: pointer
+          padding: 8px 12px 7px
+          font-size: 12px
+          transition: all .2s ease-in-out
+          margin-right: 10px
+          margin-bottom: 15px
+          width: auto
+          &:hover
+            background: rgba(255, 255, 255, 0.5)
+            color: $blue
+          &:focus
+            box-shadow: 0 0 0 3px rgba(0,123,255,.0)
+        .btn-border-white.active
+          background: $white
+          color: $blue
+          &::before
+            font-family: fontAwesome
+            content: "\f00c\00a0"
+          &:hover
+            background: rgba(255, 255, 255, 0.7)
+          &:focus
+            box-shadow: 0 0 0 3px rgba(0,123,255,.0)
+        .btn-border-white.focus
+          box-shadow: 0 0 0 3px rgba(0,123,255,.0)
+    .btn.btn-white
+      vertical-align: bottom
+    #complete
+      height: inherit
+      .thankyou
+        img
+          width: 25%
+        p
+          font-size: 30px
+          font-weight: 700
+          color: white
+          line-height: 35px
+          span
+            font-weight: 400

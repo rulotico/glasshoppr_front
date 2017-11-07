@@ -1,0 +1,24 @@
+input[type=text].form-control, input[type=email].form-control, input[type=password].form-control, input[type=tel].form-control, textarea.form-control
+  background: transparent
+  border: none
+  border-bottom: 2px solid rgba(239, 236, 236, 0.38)
+  border-radius: 0
+  transition: all .5s linear
+  position: relative
+  &:focus, &active
+    background: transparent
+    border: none
+    border-bottom: 2px solid $white
+    border-radius: 0
+
+p
+  font-size: $normal
+
+a.simple
+  color: rgba(255, 255, 255, 0.7)
+  text-decoration: underline
+  font-size: $regular
+  transition: color .3s ease
+  &:hover, &:focus
+    color: $white
+    font-weight: 700

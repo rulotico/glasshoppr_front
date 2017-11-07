@@ -1,0 +1,119 @@
+.reservations
+  padding-top: 4rem
+  padding-bottom: 3rem
+  .venue
+    height: 110px
+    margin-top: 1.5rem
+    img.shadow
+      margin-top: 1.5rem
+      position: absolute
+      z-index: -2
+      object-fit: cover
+      width: 95%
+      height: 95px
+      -webkit-filter: blur(10px)
+      margin-left: -7px
+      top: 15px
+    .reservation.venue, .reservation.venue.past
+      position: relative
+      overflow: hidden
+      img
+        position: absolute
+        z-index: -1
+        margin-left: -15px
+        object-fit: cover
+        width: 100%
+        height: 100%
+        -moz-transition: all 0.5s ease-in-out
+        -webkit-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
+      .layer
+        background: rgba(147, 150, 154, 0.3)
+        background: -webkit-linear-gradient(top, rgba(147, 150, 154, 0.6), rgba(147, 150, 154, 0.7))
+        background: -o-linear-gradient(bottom, rgba(147, 150, 154, 0.6), rgba(147, 150, 154, 0.7))
+        background: -moz-linear-gradient(bottom, rgba(147, 150, 154, 0.6), rgba(147, 150, 154, 0.7))
+        background: linear-gradient(to bottom, rgba(147, 150, 154, 0.6), rgba(147, 150, 154, 0.7))
+        z-index: 0
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%
+      .datetime
+        position: absolute
+        bottom: 0
+        right: 15px
+        text-align: right
+        p.date, p.time
+          color: $white
+          letter-spacing: 1px
+        p.date
+          margin-bottom: 0
+      .info
+        padding: 0 15px
+        bottom: 0
+        position: absolute
+        z-index: 1
+        p.name
+          color: $white
+          margin-bottom: 0
+          font-weight: 700
+          font-size: $medium
+          line-height: 18px
+        p.location
+          color: $white
+          font-weight: 400
+          font-size: $regular
+          line-height: 22px
+        p.is_open, p.is_closed
+          display: inline-block
+          margin-right: 20px
+          text-transform: uppercase
+          font-weight: 700
+          color: $white
+        p.is_open
+          span
+            display: inline-block
+            width: 11px
+            height: 11px
+            margin: 0 2px -1px 0
+            background-color: #30c75b
+            border-radius: 50%
+            box-shadow: #000 0 -1px 7px 1px, inset #6da201 0 -1px 9px, #7D0 0 2px 12px
+        p.is_closed
+          span
+            display: inline-block
+            width: 11px
+            height: 11px
+            margin: 0 2px -1px 0
+            background-color: #993800
+            border-radius: 50%
+            box-shadow: #000 0 -1px 7px 1px, inset #d20404 0 -1px 9px, #F00 0 2px 12px
+    .reservation.venue.active
+      position: relative
+      overflow: hidden
+      &:hover
+        img
+          -moz-transform: scale(1.1)
+          -webkit-transform: scale(1.1)
+          transform: scale(1.1)
+      &:active
+        img
+          -moz-transform: scale(1)
+          -webkit-transform: scale(1)
+          transform: scale(1)
+    .reservation.venue.active
+      cursor: pointer
+      border: 5px solid #30c75b
+      .layer
+        background: rgba(0, 0, 0, 0.3)
+        background: -webkit-linear-gradient(top, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+        background: -o-linear-gradient(bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+        background: -moz-linear-gradient(bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+        background: linear-gradient(to bottom, transparent, transparent, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.89))
+        z-index: 0
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%

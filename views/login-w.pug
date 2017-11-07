@@ -1,0 +1,26 @@
+extends vanilla-layout
+
+block content
+  //- Single winerie top
+  .row
+    .wlogin
+      .col-10.col-md-4.mx-auto
+        .logo.text-center
+          img(src='/images/logo-glasshoppr.png')
+        .login-module
+          //- login form
+          h2.section-title Sign in
+          .form-group
+            input(type='email', class='form-control', placeholder='Email', autocomplete='false', required='required')
+          .form-group
+            input(type='password', class='form-control', placeholder='Password', autocomplete='false', required='required')
+          .row
+            .col-12.text-center
+              .btn.btn-red sign in
+          .row
+            .col-12.text-center
+              a.btn.btn-border-white(href="/activate-w") Want to activate your winery?
+          .row
+            .col-12.text-center
+              a.simple(href='#') Recover my account
+              

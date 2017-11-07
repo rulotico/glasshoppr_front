@@ -1,0 +1,335 @@
+extends simple-layout
+
+block content
+  //- Single winerie top
+  .row
+    .builder
+      .col-11.col-md-7.mx-auto
+        .container-fluid.user
+          .row.justify-content-center
+            .col-md-2.col-4.user-pic.my-auto
+              img(src='/images/user-sample1.jpg')
+        .p-builder
+          //- favorite varietals selection
+          .panel#1-varietals
+            .row.justify-content-between
+              .col-5
+                h2.section-title Favorite varietals
+              .col-4
+                .progress
+                  //- navdots
+                  a.dot.dot1.active(href="#")
+                  a.dot.dot2(href="#")
+                  a.dot.dot3(href="#")
+                  a.dot.dot4(href="#")
+            .container-fluid.options.py-2
+              .row
+                .button-group(data-toggle='buttons')
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 1
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 2
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 3
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 4
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 5
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 6
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 7
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 8
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 9
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 10
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 11
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 12
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 13
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 14
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 15
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 16
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 17
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 18
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 19
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 20
+            .row.align-items-end
+              .col-md-7.col-11.mx-auto.mt-5
+                .btn.btn-white continue
+
+          //- wine club member selection
+          .panel#2-clubs.shownone
+            .row.justify-content-between
+              .col-5
+                h2.section-title Do you belong to any clubs?
+              .col-4
+                .progress
+                  //- navdots
+                  a.dot.dot1(href="#")
+                  a.dot.dot2.active(href="#")
+                  a.dot.dot3(href="#")
+                  a.dot.dot4(href="#")
+            .container-fluid.options.py-2
+              .row
+                .button-group(data-toggle='buttons')
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 1
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 2
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 3
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 4
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 5
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 6
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 7
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 8
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 9
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 10
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 11
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 12
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 13
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 14
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 15
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 16
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 17
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 18
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 19
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 20
+            .row.align-items-end
+              .col-md-7.col-11.mx-auto.mt-5
+                .btn.btn-white continue
+
+          //- favorite wine regions selection
+          .panel#3-regions.shownone
+            .row.justify-content-between
+              .col-5
+                h2.section-title Favorite wine regions
+              .col-4
+                .progress
+                  //- navdots
+                  a.dot.dot1(href="#")
+                  a.dot.dot2(href="#")
+                  a.dot.dot3.active(href="#")
+                  a.dot.dot4(href="#")
+            .container-fluid.options.py-2
+              .row
+                .button-group(data-toggle='buttons')
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 1
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 2
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 3
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 4
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 5
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 6
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 7
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 8
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 9
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 10
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 11
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 12
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 13
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 14
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 15
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 16
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 17
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 18
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 19
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 20
+            .row.align-items-end
+              .col-md-7.col-11.mx-auto.mt-5
+                .btn.btn-white continue
+                    
+          //- favorite cuisine selection
+          .panel#4-cuisine.shownone
+            .row.justify-content-between
+              .col-5
+                h2.section-title Favorite cuisine
+              .col-4
+                .progress
+                  //- navdots
+                  a.dot.dot1(href="#")
+                  a.dot.dot2(href="#")
+                  a.dot.dot3(href="#")
+                  a.dot.dot4.active(href="#")
+            .container-fluid.options.py-2
+              .row
+                .button-group(data-toggle='buttons')
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 1
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 2
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 3
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 4
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 5
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 6
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 7
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 8
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 9
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 10
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 11
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 12
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 13
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 14
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 15
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 16
+                  label.btn.btn-border-white.checks.active
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 17
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 18
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 19
+                  label.btn.btn-border-white.checks
+                    input(type='checkbox', autocomplete='off')
+                    |  Lorem ipsum 20
+            .row.align-items-end
+              .col-md-7.col-11.mx-auto.mt-5
+                .btn.btn-white continue
+                    
+          //- building complete
+          .panel#complete.shownone
+            .container-fluid
+              .row.align-items-center
+                .col-12.text-center.mt-5.thankyou
+                  img(src='/images/cheers.svg', class='my-4')
+                  p Thank you! <br> <span>Profile Complete

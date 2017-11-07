@@ -1,0 +1,61 @@
+nav, #navlinks
+  background-color: $white
+  box-shadow: 0 0 2px 4px rgba(31, 43, 40, 0.35)
+
+.navbar-light
+  .navbar-brand
+    img
+      height: 30px
+  .login
+    padding: 8px 0
+    margin-top: 3px
+    text-transform: uppercase
+    font-size: $regular
+    font-weight: 700
+    float: right
+    &:active
+      color: $blue
+    &:hover
+      text-decoration: none
+    &::after
+      clear: both
+    @media screen and (max-width: $break-medium)
+      display: none
+  .navbar-toggler-icon
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(43, 56, 71, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+  .navbar-toggler
+    cursor: pointer
+    color: $blue
+    border: none
+
+#navlinks
+  flex: 0 0 33.333333%
+  max-width: 33.333333%
+  position: fixed
+  background-color: $bgwhite
+  right: 1%
+  top: 58px
+  padding-right: 0
+  padding-left: 0
+  border-radius: 0 0 6px 6px
+  z-index: 1029
+  ul
+    list-style: none
+    padding: 15px
+    margin: 0
+    li
+      text-transform: uppercase
+      font-size: $regular
+      font-weight: 700
+      padding: 5px
+      a
+        text-decoration: none
+        &:active
+          color: $blue
+    li.login
+      @media screen and (min-width: $break-medium)
+        display: none
+  @media screen and (max-width: $break-medium)
+    width: 100%
+    flex: 0 0 100%
+    max-width: 100%

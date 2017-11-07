@@ -1,0 +1,48 @@
+footer
+  position: relative
+  bottom: -30px
+  width: 100%
+  background-color: $blue
+  padding: 20px 15px
+  margin-top: 20px
+  p
+    color: $white
+    margin: 0
+    padding: 10px
+    font-size: $regular
+  p.space
+    padding: 0 6px
+  .glasswine
+    text-align: left
+    @media screen and (max-width: $break-medium)
+      text-align: center
+      padding-bottom: 20px
+  .footlinks
+    text-align: right
+    p, a
+      font-size: $regular
+      color: $white
+      font-weight: 700
+      display: inline-block
+    a
+      span
+        font-size: 18px
+        color: $white
+        position: relative
+        top: 2px
+        &:hover
+          color: $gray
+          text-decoration: none
+        &:active
+          color: $white
+      span.fa-facebook-square
+        margin: 0 6px 0 3px
+      span.fa-twitter
+        margin: 0 0 0 5px
+      &:hover
+        color: $gray
+        text-decoration: none
+      &:active
+        color: $white
+    @media screen and (max-width: $break-medium)
+      text-align: center

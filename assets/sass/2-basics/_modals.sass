@@ -1,0 +1,238 @@
+.modal-dialog
+  background: transparent
+  @media (min-width: 576px)
+    max-width: 400px
+    margin: 10vw auto
+  .modal-content
+    border: none
+    z-index: 0
+    .modal-body
+      box-shadow: 0px 0px 5px 0px rgba(35, 35, 35, 0.6)
+      background: rgba(43, 56, 71, 0.9)
+      border: none
+      border-radius: 2px
+      overflow: hidden
+      &::before
+        content: ''
+        position: absolute
+        height: 100%
+        width: 100%
+        background: url('../images/bg-sample.jpg') no-repeat 50% fixed / cover
+        z-index: 0
+        top: 0
+        right: 0
+        bottom: 0
+        filter: blur(80px)
+        // filter: blur(20px)
+        transition: all .3s ease-out
+        // opacity: 0.3
+      .modal-title
+        margin-bottom: 20px
+        position: relative
+        text-transform: uppercase
+        font-weight: 700
+        color: white
+        letter-spacing: 1px
+
+#wsignup, #wpaidreservaton, #wsuccess
+  .modal-dialog
+    background: transparent
+    @media (min-width: 576px)
+      max-width: 400px
+      margin: 3vh auto
+    .modal-header
+      background: rgba(43, 56, 71, 0.98)
+      border-bottom: none
+      border-radius: 2px
+      width: 85%
+      margin: 0 auto
+      position: relative
+      top: 25px
+      z-index: 1
+      color: $white
+      p, h1
+        color: $white
+        margin-bottom: 0
+      p
+        font-size: $regular
+      h1.winerie
+        font-weight: 700
+        font-size: $large
+      p.address
+        font-size: $normal
+        text-decoration: underline
+    .modal-content
+      background: hsla(0, 0%, 65%, 0.95)
+      border-radius: 4px
+      border: none
+      .book-inner
+        padding: 35px 5px 20px
+        .date
+          p
+            margin-bottom: 0
+            color: white
+            font-size: 26px
+            font-weight: 700
+            span
+              font-size: 12px
+              text-transform: uppercase
+              font-weight: 400
+            span.fa
+              color: white
+              font-size: 26px
+              font-weight: 700
+        .separator
+          border-left: 2px solid rgba(255, 255, 255, 0.2)
+          border-right: 2px solid rgba(255, 255, 255, 0.2)
+      .form-winery
+        position: relative
+        border-top: 2px solid rgba(255, 255, 255, 0.2)
+        margin-top: 10px
+        padding: 15px 0 0
+      input.first
+        margin-top: 5vh
+
+#wsuccess
+  .modal-dialog
+    background: transparent
+    @media (min-width: 576px)
+      max-width: 350px
+      margin: 3vh auto
+    .modal-header
+      background: #43c46d
+      background: -webkit-linear-gradient(#43c46d, #54d57d)
+      background: -o-linear-gradient(#43c46d, #54d57d)
+      background: -moz-linear-gradient(#43c46d, #54d57d)
+      background: linear-gradient(#43c46d, #54d57d)
+      h2.success
+        font-size: 28px
+        color: #fff
+        text-transform: uppercase
+        letter-spacing: 1px
+        margin-top: 9px
+        font-weight: 700
+        margin-left: -15px
+    .modal-footer
+      background: $red
+      border-bottom: none
+      border-radius: 2px
+      width: 70%
+      margin: 0 auto
+      position: relative
+      bottom: -15px
+      z-index: 1
+      color: $white
+      justify-content: center
+      border-top: none
+      padding: 0
+      &:hover
+        background: $wine
+      a
+        padding: 10px 20px 8px
+        color: $white
+        font-weight: 700
+        font-size: $medium
+        margin-bottom: 0
+        &:hover
+          text-decoration: none
+    .modal-content
+      border: none
+      .modal-title
+        color: $blue
+      .modal-body
+        border: none
+        box-shadow: 0px 0px 5px 0px rgba(35, 35, 35, 0.6)
+        background: $bgwhite
+        color: $blue
+        &::before
+          background: none
+        .book-inner
+          padding: 35px 5px 20px
+          .date
+            p
+              margin-bottom: 0
+              color: $blue
+              font-size: 20px
+              font-weight: 700
+              span
+                font-size: 10px
+                text-transform: uppercase
+                font-weight: 400
+              span.fa
+                color: $gray
+                font-size: 20px
+                font-weight: 700
+          .separator
+            border-left: 2px solid rgba(141, 160, 171, 0.5)
+            border-right: 2px solid rgba(141, 160, 171, 0.5)
+        .success-winery
+          position: relative
+          margin-top: 10px
+          padding: 15px 0 0
+          .to
+            margin-bottom: 0
+            color: $gray
+            font-size: $regular
+            line-height: 28px
+            font-weight: 700
+            text-transform: uppercase
+          .name
+            margin-bottom: 0
+            color: $blue
+            font-size: $large
+            line-height: 19px
+            font-weight: 700
+          .email
+            margin-bottom: 0
+            color: $blue
+            font-size: $normal
+      p, h1
+        color: $blue
+        margin-bottom: 0
+      h1.winerie
+        font-weight: 700
+        font-size: $large
+      p.address
+        color: $gray
+        font-size: $regular
+        text-decoration: underline
+    .social
+      hr
+        border-top: 1px solid $gray
+        width: 70%
+        margin-top: 0
+        margin-bottom: 0
+      a
+        display: inline-block
+        margin: 25px 15px 10px
+      .fa
+        font-size: 26px
+        cursor: pointer
+        transition: all .2s ease-in-out
+        &:hover, &:focus
+          transform: scale(1.3,1.3)
+      .fa-facebook-official
+        color: #3b5997
+      .fa-twitter
+        color: #1dcaff
+      .fa-envelope-o
+        color: $gray
+
+input[type=text].form-control, input[type=email].form-control, input[type=password].form-control, input[type=tel].form-control, textarea.form-control
+  position: relative
+  font-weight: 700
+  color: $white
+  &:focus, &:active
+    background: transparent
+    border: none
+    border-bottom: 2px solid $white
+    border-radius: 0
+    color: $white
+    &::placeholder
+      color: $white
+  &::placeholder
+    color: rgba(239, 236, 236, 0.58)
+    font-weight: 700
+    transition: all .5s linear
+  &:focus + .region
+    color: $white

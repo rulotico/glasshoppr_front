@@ -1,0 +1,85 @@
+extends vanillalayout
+
+block content
+  //- Rating top
+  //- .row
+  //-   .col-md-6.col-12.mx-auto.text-center.py-4
+  //-     a(target='_blank', style='text-decoration:none;', href='http://www.glasshoppr.com')
+  //-       img(src='/images/logo-glasshoppr.png', alt='GLASSHOPPR.COM', class="img-fluid")
+  .row
+    .col-md-6.col-12.mx-auto.text-center.nosidepadding
+      .banner-img
+        p Did you enjoy your visit?
+  .row
+    .col-md-6.col-12.mx-auto.text-center.py-5.rate
+      h2.winery-name Bodegas YSIOS <span>7438 Blix St, San Diego, CA, 92111</span>
+      h2.recommend Whould You Recommend This Winery?
+      .thumbs
+        a(target='_blank', href='#')
+          img(src='/images/thumbsup.png')
+      .thumbs
+        a(target='_blank', href='#')
+          img(src='/images/thumbsdown.png')
+      .row
+        .col-md-9.col-12.mx-auto
+          .row
+            .col-6.text-right.categories
+              p Facilities
+              p Service
+              p Wine
+              p Overall Experience
+            .col-6.rank
+              .group
+                fieldset.rating
+                  input#star5(type='radio', name='rating', value='5')
+                  label.full(for='star5', title='Awesome - 5 stars')
+                  input#star4(type='radio', name='rating', value='4')
+                  label.full(for='star4', title='Pretty good - 4 stars')
+                  input#star3(type='radio', name='rating', value='3')
+                  label.full(for='star3', title='Meh - 3 stars')
+                  input#star2(type='radio', name='rating', value='2')
+                  label.full(for='star2', title='Kinda bad - 2 stars')
+                  input#star1(type='radio', name='rating', value='1')
+                  label.full(for='star1', title='Sucks big time - 1 star')
+              .group
+                fieldset.rating
+                  input#star5(type='radio', name='rating', value='5')
+                  label.full(for='star5', title='Awesome - 5 stars')
+                  input#star4(type='radio', name='rating', value='4')
+                  label.full(for='star4', title='Pretty good - 4 stars')
+                  input#star3(type='radio', name='rating', value='3')
+                  label.full(for='star3', title='Meh - 3 stars')
+                  input#star2(type='radio', name='rating', value='2')
+                  label.full(for='star2', title='Kinda bad - 2 stars')
+                  input#star1(type='radio', name='rating', value='1')
+                  label.full(for='star1', title='Sucks big time - 1 star')
+              .group
+                fieldset.rating
+                  input#star5(type='radio', name='rating', value='5')
+                  label.full(for='star5', title='Awesome - 5 stars')
+                  input#star4(type='radio', name='rating', value='4')
+                  label.full(for='star4', title='Pretty good - 4 stars')
+                  input#star3(type='radio', name='rating', value='3')
+                  label.full(for='star3', title='Meh - 3 stars')
+                  input#star2(type='radio', name='rating', value='2')
+                  label.full(for='star2', title='Kinda bad - 2 stars')
+                  input#star1(type='radio', name='rating', value='1')
+                  label.full(for='star1', title='Sucks big time - 1 star')
+              .group
+                fieldset.rating
+                  input#star5(type='radio', name='rating', value='5')
+                  label.full(for='star5', title='Awesome - 5 stars')
+                  input#star4(type='radio', name='rating', value='4')
+                  label.full(for='star4', title='Pretty good - 4 stars')
+                  input#star3(type='radio', name='rating', value='3')
+                  label.full(for='star3', title='Meh - 3 stars')
+                  input#star2(type='radio', name='rating', value='2')
+                  label.full(for='star2', title='Kinda bad - 2 stars')
+                  input#star1(type='radio', name='rating', value='1')
+                  label.full(for='star1', title='Sucks big time - 1 star')
+      .row
+        .col-md-8.col-12.mx-auto.my-3.review
+          textarea(class='form-control', placeholder='Write a review', rows='1')
+      .row
+        .col-md-6.col-10.mx-auto
+          .btn.btn-red send

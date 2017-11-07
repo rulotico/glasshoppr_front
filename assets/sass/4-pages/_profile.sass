@@ -1,0 +1,177 @@
+// top banner profile
+.topbanner.profile
+  cursor: pointer
+  width: 100%
+  // background: url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+  background-color: #000
+  position: relative
+  height: 160px
+  padding-top: 58px
+  @media screen and (max-width: $break-medium)
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.75))), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.75) 100%), url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+    height: 270px
+  .wrapper
+    position: absolute
+    bottom: -40px
+    width: 100%
+    .user-pic
+      text-align: right
+      @media screen and (max-width: $break-medium)
+        text-align: center
+      img
+        border-radius: 50%
+        width: 90px
+        height: 90px
+        object-fit: cover
+    .name
+      padding: 15px 10px 0
+      @media screen and (max-width: $break-medium)
+        text-align: center
+      p
+        font-size: $medium
+        font-weight: 700
+        letter-spacing: 1px
+        color: $white
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45)
+    .menu
+      width: 100%
+      height: 85px
+      background: rgba(44, 57, 72, 0.98)
+      border-radius: 4px
+      color: $white
+      overflow: hidden
+      @media screen and (max-width: $break-medium)
+        margin: 0 auto
+      &::before
+        content: ''
+        position: absolute
+        height: 30px
+        width: 100%
+        background: url('../images/profilebg-sample.jpg') no-repeat bottom fixed / cover
+        z-index: 0
+        top: 0
+        right: 0
+        bottom: 0
+        filter: blur(25px)
+        opacity: 0.9
+      a
+        color: $white
+        display: inline-block
+        font-size: $normal
+        margin-bottom: 5px
+        transition: all .4s ease-in-out
+        &:hover
+          text-decoration: none
+          font-weight: 700
+      a.active
+        font-weight: 700
+        border-bottom: 1px solid $white
+
+.info.profile
+  padding-top: 6rem
+  a
+    span
+      color: $blue
+      display: inline-block
+      float: right
+      font-size: 22px
+    &:hover
+      text-decoration: none
+  h2
+    font-weight: 700
+    font-size: $large
+    margin-bottom: 0
+  p
+    font-weight: 700
+    font-size: $normal
+    margin-top: 30px
+  .user-info
+    padding: 25px
+    background: #f5f5f9
+    color: $blue
+    #userinfo
+      padding-top: 30px
+    input[type=text].form-control, input[type=email].form-control, input[type=password].form-control, input[type=tel].form-control
+      position: relative
+      padding: .5rem 0
+      font-weight: 700
+      border-bottom: 2px solid rgba(142, 160, 172, 0.48)
+      color: $blue
+      &:focus, &:active
+        background: transparent
+        border: none
+        border-bottom: 2px solid $blue
+        border-radius: 0
+        color: $blue
+        font-weight: 700
+        &::placeholder
+          color: $blue
+      &::placeholder
+        color: $gray
+        font-weight: 400
+        transition: all .5s linear
+      &:focus + .region
+        color: $blue
+    .btn-border-blue
+      width: 200px
+      text-align: center
+  .user-preferences
+    background: $bgblue
+    color: $white
+    padding: 25px
+    h2, p
+      color: $white
+    a
+      span
+        color: $white
+        display: inline-block
+        float: right
+        font-size: 22px
+    .options
+      display: flex
+      .button-group
+        position: relative
+        vertical-align: middle
+        width: 100%
+        .btn-border-white.checks
+          background: transparent
+          color: #fff
+          border: 1px solid #fff
+          font-weight: 400
+          text-transform: capitalize
+          border-radius: 20px
+          cursor: pointer
+          padding: 8px 12px 7px
+          font-size: 12px
+          transition: all .2s ease-in-out
+          margin-right: 10px
+          margin-bottom: 15px
+          width: auto
+          &:hover
+            background: rgba(255, 255, 255, 0.5)
+            color: $blue
+          &:focus
+            box-shadow: 0 0 0 3px rgba(0,123,255,.0)
+        .btn-border-white.active
+          background: $white
+          color: $blue
+          &::before
+            font-family: fontAwesome
+            content: "\f00c\00a0"
+          &:hover
+            background: rgba(255, 255, 255, 0.7)
+          &:focus
+            box-shadow: 0 0 0 3px rgba(0,123,255,.0)
+        .btn-border-white.focus
+          box-shadow: 0 0 0 3px rgba(0,123,255,.0)

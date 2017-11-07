@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  //- Index top
+  .row
+    //- top banner
+    .topbanner.about
+      .layer
+      .col-12.head
+        .container
+          .row
+            .col-md-6.col-10.mx-auto
+              h1 Contact
+    .container.mt-5.aboutus
+      .row
+        .col-md-6.col-10.mx-auto.py-4
+          p Lacus vel facilisis volutpat est velit egestas dui id. Varius quam quisque id diam vel quam elementum pulvinar etiam. Eget nunc scelerisque viverra mauris in aliquam sem. Cursus in hac habitasse platea dictumst. Sed nisi lacus sed viverra tellus in hac habitasse. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus <span class="mail">cheers@glasshoppr.com</span>
+      .row
+        .col-md-6.col-10.mx-auto.py-2.contact
+          .row
+            .col-md-10.col-11.mx-auto.contact-info
+              .form-group
+                input(type='text', class='form-control', placeholder='Name', autocomplete='false', required='required')
+                input(type='email', class='form-control', placeholder='Email', autocomplete='false', required='required')
+                textarea(class='form-control', placeholder='Message', rows='1')
+              
+          .row
+            .col-md-10.col-11.mx-auto
+              .btn.btn-red send

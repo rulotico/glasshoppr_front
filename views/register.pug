@@ -1,0 +1,30 @@
+extends simple-layout
+
+block content
+  //- Single winerie top
+  .row
+    .mainlogin
+      .col-10.col-md-4.mx-auto
+        .login-module
+          .form-winery
+            .row
+              .col-md-6.col-12
+                h2.section-title Sign up!
+              .col-md-6.col-12.text-right
+                a.simple(href='/login') Already a Member?
+            .form-group
+              input(type='text', class='form-control', placeholder='Name & Last Name', autocomplete='false', required='required')
+            .form-group
+              input(type='email', class='form-control', placeholder='Email', autocomplete='false', required='required')
+            .form-group
+              .container-fluid
+                .row
+                  .col-2.nosidepadding
+                    input(type='text', class='form-control', placeholder='US', value="US", autocomplete='false', required='required')
+                  .col-10.pr-0
+                    input(type='tel', onkeypress="return event.charCode >= 48 && event.charCode <= 57", class='form-control', placeholder='Phone', autocomplete='false', required='required')
+            .form-group
+              input(type='password', class='form-control', placeholder='Password', autocomplete='false', required='required')
+            .row
+              .col-12.mt-2
+                .btn.btn-white submit
