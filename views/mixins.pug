@@ -18,3 +18,62 @@ mixin usernav
         a(href="/favorites") Taste List
 
 //- Winery Admin navbar (sidebar)
+mixin winerydashboard
+  #sidebar.col-md-2.col-xs-1.pl-0.pr-0
+    h1 Bodegas YSIOS
+    .list-group
+      //- Active if Book
+      - if(url === '/login-w')
+        a.list-group-item.active
+          i.fa.fa-ticket
+          span.hidden-sm-down Book
+      - else
+        a.list-group-item
+          i.fa.fa-ticket
+          span.hidden-sm-down Book
+      //- Active if Book List
+      - if(url === '/login-w')
+        a.list-group-item
+          i.fa.fa-list
+          span.hidden-sm-down Book List
+      - else
+        a.list-group-item
+          i.fa.fa-list
+          span.hidden-sm-down Book List
+      //- Active if Varietals & Wines
+      - if(url === '/login-w')
+        a.list-group-item
+          i.fa.fa-glass
+          span.hidden-sm-down Varietals & Wines
+      - else
+        a.list-group-item
+          i.fa.fa-glass
+          span.hidden-sm-down Varietals & Wines
+      //- Active if Profile
+      - if(url === '/login-w')
+        a.list-group-item
+          i.fa.fa-user
+          span.hidden-sm-down Profile
+      - else
+        a.list-group-item
+          i.fa.fa-user
+          span.hidden-sm-down Profile
+      //- Active if Analytics
+      - if(url === '/login-w')
+        a.list-group-item
+          i.fa.fa-line-chart
+          span.hidden-sm-down Analytics
+      - else
+        a.list-group-item
+          i.fa.fa-line-chart
+          span.hidden-sm-down Analytics
+      //- Active if Premium
+      - if(url === '/login-w')
+        a.list-group-item
+          i.fa.fa-diamond
+          span.hidden-sm-down Go Premium!
+      - else
+        a.list-group-item
+          i.fa.fa-diamond
+          span.hidden-sm-down Go Premium!
+    img(src='/images/logo-glasshoppr-white.svg', class='text-center')

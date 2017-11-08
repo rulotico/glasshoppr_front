@@ -1,0 +1,72 @@
+#sidebar
+  background: url('../images/userbg-sample.jpg') no-repeat center
+  background-size: cover
+  position: relative
+  overflow: hidden
+  padding: 50px 15px 0
+  &::before
+    content: ''
+    position: absolute
+    height: 101%
+    width: 120%
+    // background: url('../images/userbg-sample.jpg') no-repeat center
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.85) 100%), url('../images/userbg-sample.jpg') no-repeat center
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(70%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.85))), url('../images/userbg-sample.jpg') no-repeat center
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.85) 100%), url('../images/userbg-sample.jpg') no-repeat center
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.85) 100%), url('../images/userbg-sample.jpg') no-repeat center
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.85) 100%), url('../images/userbg-sample.jpg') no-repeat center
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.85) 100%), url('../images/userbg-sample.jpg') no-repeat center
+    background-size: cover
+    z-index: 0
+    top: 0
+    right: 0
+    bottom: 0
+    left: -15%
+    filter: blur(5px)
+    @media screen and (max-width: $break-medium)
+      height: auto
+  h1
+    font-size: $large
+    text-align: center
+    position: relative
+    color: $white
+    font-weight: 700
+  img
+    position: absolute
+    bottom: 5%
+    width: 150px
+    margin: 0 12%
+  .list-group-item
+    border-radius: 0
+    color: $white
+    background: transparent
+    border-left: 0
+    border-right: 0
+    border: none
+    white-space: nowrap
+    padding: 6% 15%
+  .list-group
+    margin-top: 10%
+    .list-group-item
+      cursor: pointer
+      &:hover, &:active
+        font-weight: 700
+      &.active
+        font-weight: 700
+        span
+          padding-bottom: 1px
+          padding-right: 10px
+          border-bottom: 1px solid $white
+      span
+        padding-left: 10px
+
+@media (max-width: 48em)
+  #sidebar .list-group
+    position: absolute
+    z-index: 1
+    width: 190px
+  > .list-group-item
+    text-align: center
+    padding: .75rem .5rem
+    &[aria-expanded="true"]::after, &[aria-expanded="false"]::after
+      display: none

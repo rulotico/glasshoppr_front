@@ -91,5 +91,10 @@ router.get('/complete-w', function(req, res, next) {
   res.render('complete-w', { title: 'Thank you! | Glasshoppr' });
 });
 
+/* GET winery dashborard welcome page. */
+router.get('/dashboard-w', function(req, res, next) {
+  res.render('dashboard-w', { title: 'Welcome! | Glasshoppr', url: req.originalUrl });
+});
+
 
 module.exports = router;
