@@ -1,4 +1,5 @@
 extends layout
+include mixins.pug
 
 block content
   //- My profile top
@@ -12,13 +13,7 @@ block content
             .col-md-2.col-12.align-self-start.name
               p Edgar Lozano
             .col-md-4.col-10.menu
-              .row.justify-content-around.py-3.mt-3
-                .col.text-center
-                  a(href="/profile") My Profile
-                .col.text-center
-                  a.active(href="/reservations") Reservations
-                .col.text-center
-                  a(href="/favorites") Taste List
+              +usernav
                   
     .container.reservations
       .row

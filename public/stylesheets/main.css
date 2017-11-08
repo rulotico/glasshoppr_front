@@ -3788,6 +3788,9 @@ nav, #navlinks {
 #navlinks ul li a:active {
   color: #2B3847;
 }
+#navlinks ul li a.active {
+  color: #DE0012;
+}
 @media screen and (min-width: 768px) {
   #navlinks ul li.login {
     display: none;

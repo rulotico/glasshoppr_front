@@ -1,0 +1,20 @@
+//- User nav (profile) mixin
+mixin usernav
+  .row.justify-content-around.py-3.mt-3
+    .col.text-center
+      - if(url === '/profile')
+        a(href='/profile', class='active') My Profile
+      - else
+        a(href="/profile") My Profile
+    .col.text-center
+      - if(url === '/reservations')
+        a(href='/reservations', class='active') Reservations
+      - else
+        a(href="/reservations") Reservations
+    .col.text-center
+      - if(url === '/favorites')
+        a(href='/favorites', class='active') Taste List
+      - else
+        a(href="/favorites") Taste List
+
+//- Winery Admin navbar (sidebar)
