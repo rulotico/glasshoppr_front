@@ -6163,6 +6163,7 @@ footer .footlinks a:active {
   border-bottom: 1px solid #fff;
 }
 #sidebar .list-group .list-group-item span {
+  margin-left: 10px;
   padding-left: 10px;
 }
 
