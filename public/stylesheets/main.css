@@ -6181,3 +6181,14 @@ footer .footlinks a:active {
     display: none;
   }
 }
+.icon-cheers {
+  margin: auto;
+  width: 115px;
+  height: 82px;
+  display: block;
+  -webkit-mask: url("../images/cheers.svg") no-repeat 50% 50%;
+  mask: url("../images/cheers.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #830006;
+}
