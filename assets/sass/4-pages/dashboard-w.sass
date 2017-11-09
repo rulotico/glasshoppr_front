@@ -82,3 +82,85 @@
   -webkit-mask-size: cover
   mask-size: cover
   background-color: $wine
+
+
+
+// PRUEBA
+
+#container
+  min-height: 500px
+  header
+    width: 100%
+    height: 120px
+    background: $gray
+    text-align: center
+    color: #fff
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    padding: 0
+    h1, h2
+      width: 100%
+      margin: 0 0 0 0
+      padding: 0
+      height: 40%
+    h1
+      line-height: 65px
+      margin-top: 18px
+      margin-bottom: 0
+      font-size: 1.2rem
+    h2
+      line-height: 10px
+      margin-top: 0
+      text-transform: uppercase
+      font-size: 1rem
+      font-weight: 100
+      color: #8eefff
+      letter-spacing: 2px
+  #headings ul
+    list-style-type: none
+    padding-left: 0
+    width: 100%
+    height: 20px
+    margin: 0
+    padding: 0
+    display: flex
+    box-shadow: 0 -1px 0 rgba(255,255,255,.4)
+    li
+      display: inline-block
+      font-size: 10px
+      margin: 0 0 0 0
+      padding: 0 0 0 0
+      flex: 1
+      text-align: center
+      font-weight: bold
+      background-color: $blue
+      height: 22px
+      line-height: 22px
+      color: #fff
+      border-left: 1px solid rgba(255, 255, 255, 0.4)
+  section
+    display: flex
+    height: 380px
+    width: 100%
+    flex-wrap: wrap
+    justify-content: flex-start
+    div
+      display: inline-block
+      height: 12%
+      width: calc(100% / 7)
+      text-align: center
+      line-height: 76px
+      font-size: 18px
+      font-weight: 300
+      box-shadow: 1px 1px 0 0 rgba(60, 112, 128, 0.26)
+      margin: 0
+      height: 76px
+      background-color: rgba(0, 0, 0, 0.05)
+      border-collapse: collapse
+      &:first-child
+        margin-left: calc(~'12.5% * 1 + 0.4088em')
+      &.today
+        background: $gray
+        color: #FFF
+        font-weight: bold
