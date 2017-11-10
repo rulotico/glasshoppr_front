@@ -13,8 +13,36 @@ block content
         each val in daysName
           .col.week.day
             -var week = moment().week();
+            -var today = moment().format('dd D');
             -var thisWeek = moment().day(val).week(week);
             -var thisDay = moment(thisWeek).format('dd D');
             p.day= thisDay
-            .event
+            if today == thisDay
+              .event.today
+                .row.align-items-center.py-2
+                  .col-6.party.mt-1.pr-1
+                    p <span class="fa fa-user"></span> 2
+                  .col-6.time.mx-auto.text-left
+                    p 10:00
+                .row
+                  .bordertop.mx-auto
+                    .col-12.py-2.px-0.usermail johnsmith@mail.com
+                  .bordertop.mx-auto
+                    .col-12.py-2.px-0.username John Smith
+                  .bordertop.mx-auto
+                    .col-12.py-2.px-0.userphone 22-222-22-2222
+            else
+              .event
+                .row.align-items-center.py-2
+                  .col-6.party.mt-1.pr-1
+                    p <span class="fa fa-user"></span> 2
+                  .col-6.time.mx-auto.text-left
+                    p 10:00
+                .row
+                  .bordertop.mx-auto
+                    .col-12.py-2.px-0.usermail johnsmith@mail.com
+                  .bordertop.mx-auto
+                    .col-12.py-2.px-0.username John Smith
+                  .bordertop.mx-auto
+                    .col-12.py-2.px-0.userphone 22-222-22-2222
               

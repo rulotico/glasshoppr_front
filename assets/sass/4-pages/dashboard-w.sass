@@ -114,15 +114,56 @@
   .event
     cursor: pointer
     background: #fff
-    height: 200px
     border-radius: 8px
     margin: 8px -10px 0
-    opacity: 0.7
+    opacity: 0.5
+    color: $blue
     transition: all .3s ease-in-out
     &:hover
-      background: #30c95c
-      box-shadow: 0px 5px 20px
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.52)
       opacity: 1
+    .party
+      border-right: 1px solid rgba(239, 236, 236, 0.5)
+      p
+        font-size: $xxlarge
+        font-weight: 700
+        margin-bottom: 0
+    .time
+      p
+        font-size: $normal
+        margin-bottom: 0
+    .usermail
+      font-size: $small
+      text-transform: uppercase
+    .username
+      font-size: $regular
+      font-weight: 700
+      text-transform: uppercase
+    .userphone
+      font-size: $regular
+      text-transform: uppercase
+    .bordertop
+      border-top: 1px solid rgba(239, 236, 236, 0.5)
+      width: 70%
+  .event.today
+    background: #30c95c
+    opacity: 0.4
+    color: $white
+    &:hover
+      opacity: 1
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.52)
+    .party
+      border-right: 1px solid rgba(239, 236, 236, 0.5)
+      p
+        color: $white
+        font-size: $xxlarge
+        font-weight: 700
+        margin-bottom: 0
+    .time
+      p
+        color: $white
+        font-size: $normal
+        margin-bottom: 0
 
 
 

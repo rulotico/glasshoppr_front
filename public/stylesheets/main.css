@@ -6227,18 +6227,70 @@ footer .footlinks a:active {
 .week.day .event {
   cursor: pointer;
   background: #fff;
-  height: 200px;
   border-radius: 8px;
   margin: 8px -10px 0;
-  opacity: 0.7;
+  opacity: 0.5;
+  color: #2B3847;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .week.day .event:hover {
-  background: #30c95c;
-  -webkit-box-shadow: 0px 5px 20px;
-          box-shadow: 0px 5px 20px;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.52);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.52);
   opacity: 1;
+}
+.week.day .event .party {
+  border-right: 1px solid rgba(239, 236, 236, 0.5);
+}
+.week.day .event .party p {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.week.day .event .time p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.week.day .event .usermail {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.week.day .event .username {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.week.day .event .userphone {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.week.day .event .bordertop {
+  border-top: 1px solid rgba(239, 236, 236, 0.5);
+  width: 70%;
+}
+.week.day .event.today {
+  background: #30c95c;
+  opacity: 0.4;
+  color: #fff;
+}
+.week.day .event.today:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.52);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.52);
+}
+.week.day .event.today .party {
+  border-right: 1px solid rgba(239, 236, 236, 0.5);
+}
+.week.day .event.today .party p {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.week.day .event.today .time p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 #container.calendar {
