@@ -6096,6 +6096,7 @@ footer .footlinks a:active {
 
 #sidebar {
   background: url("../images/userbg-sample.jpg") no-repeat center;
+  background-position: absolute;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -6109,6 +6110,7 @@ footer .footlinks a:active {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(0, 0, 0, 0.85))), url("../images/userbg-sample.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0, 0, 0, 0.85) 100%), url("../images/userbg-sample.jpg") no-repeat center;
   background-size: cover;
+  background-position: absolute;
   z-index: 0;
   top: 0;
   right: 0;
@@ -6122,20 +6124,25 @@ footer .footlinks a:active {
     height: auto;
   }
 }
-#sidebar h1 {
+#sidebar #sticky {
+  position: fixed;
+  max-width: 20%;
+  height: 100%;
+}
+#sidebar #sticky h1 {
   font-size: 21px;
   text-align: center;
   position: relative;
   color: #fff;
   font-weight: 700;
 }
-#sidebar img {
+#sidebar #sticky img {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   width: 150px;
   margin: 0 12%;
 }
-#sidebar .list-group-item {
+#sidebar #sticky .list-group-item {
   border-radius: 0;
   color: #fff;
   background: transparent;
@@ -6145,24 +6152,24 @@ footer .footlinks a:active {
   white-space: nowrap;
   padding: 6% 15%;
 }
-#sidebar .list-group {
+#sidebar #sticky .list-group {
   margin-top: 10%;
 }
-#sidebar .list-group .list-group-item {
+#sidebar #sticky .list-group .list-group-item {
   cursor: pointer;
 }
-#sidebar .list-group .list-group-item:hover, #sidebar .list-group .list-group-item:active {
+#sidebar #sticky .list-group .list-group-item:hover, #sidebar #sticky .list-group .list-group-item:active {
   font-weight: 700;
 }
-#sidebar .list-group .list-group-item.active {
+#sidebar #sticky .list-group .list-group-item.active {
   font-weight: 700;
 }
-#sidebar .list-group .list-group-item.active span {
+#sidebar #sticky .list-group .list-group-item.active span {
   padding-bottom: 1px;
   padding-right: 10px;
   border-bottom: 1px solid #fff;
 }
-#sidebar .list-group .list-group-item span {
+#sidebar #sticky .list-group .list-group-item span {
   margin-left: 10px;
   padding-left: 10px;
 }
@@ -6194,10 +6201,50 @@ footer .footlinks a:active {
   background-color: #830006;
 }
 
-#container {
+.week.day {
+  background: #EFECEC;
+  border-radius: 4px;
+  min-height: 85vh;
+  color: #8EA0AC;
+  margin-left: 4px;
+}
+.week.day p.day {
+  text-align: justify;
+  text-align-last: justify;
+  padding: 15px 0 5px;
+  line-height: 10px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #8EA0AC;
+  border-bottom: 2px solid #8EA0AC;
+}
+.week.day p.day::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.week.day .event {
+  cursor: pointer;
+  background: #fff;
+  height: 200px;
+  border-radius: 8px;
+  margin: 8px -10px 0;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.week.day .event:hover {
+  background: #30c95c;
+  -webkit-box-shadow: 0px 5px 20px;
+          box-shadow: 0px 5px 20px;
+  opacity: 1;
+}
+
+#container.calendar {
   min-height: 500px;
 }
-#container header {
+#container.calendar header {
   width: 100%;
   height: 120px;
   background: #8EA0AC;
@@ -6214,19 +6261,19 @@ footer .footlinks a:active {
       flex-wrap: wrap;
   padding: 0;
 }
-#container header h1, #container header h2 {
+#container.calendar header h1, #container.calendar header h2 {
   width: 100%;
   margin: 0 0 0 0;
   padding: 0;
   height: 40%;
 }
-#container header h1 {
+#container.calendar header h1 {
   line-height: 65px;
   margin-top: 18px;
   margin-bottom: 0;
   font-size: 1.2rem;
 }
-#container header h2 {
+#container.calendar header h2 {
   line-height: 10px;
   margin-top: 0;
   text-transform: uppercase;
@@ -6235,7 +6282,7 @@ footer .footlinks a:active {
   color: #8eefff;
   letter-spacing: 2px;
 }
-#container #headings ul {
+#container.calendar #headings ul {
   list-style-type: none;
   padding-left: 0;
   width: 100%;
@@ -6248,7 +6295,7 @@ footer .footlinks a:active {
   -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.4);
           box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.4);
 }
-#container #headings ul li {
+#container.calendar #headings ul li {
   display: inline-block;
   font-size: 10px;
   margin: 0 0 0 0;
@@ -6264,7 +6311,7 @@ footer .footlinks a:active {
   color: #fff;
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
-#container section {
+#container.calendar section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6276,7 +6323,7 @@ footer .footlinks a:active {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-#container section div {
+#container.calendar section div {
   display: inline-block;
   height: 12%;
   width: calc(100% / 7);
@@ -6291,10 +6338,10 @@ footer .footlinks a:active {
   background-color: rgba(0, 0, 0, 0.05);
   border-collapse: collapse;
 }
-#container section div:first-child {
+#container.calendar section div:first-child {
   margin-left: calc(~'12.5% * 1 + 0.4088em');
 }
-#container section div.today {
+#container.calendar section div.today {
   background: #8EA0AC;
   color: #FFF;
   font-weight: bold;

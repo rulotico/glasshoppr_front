@@ -1,34 +1,20 @@
 extends w-dashboard
-include mixins.pug
 
 block content
-  .row.h-100
-    .col-sm-12.my-auto.text-center
-      - var check = moment();
-      - var day   = check.format('D');
-      - var timestamp = moment();
-      - var today = moment();
-      - var dayNum = today.format('D');
-      - var year  = check.format('YYYY');
-      - var month = check.format('MMMM');
-      - var monthStart = moment().startOf('month');
-      - var monthEnd = moment().startOf('year');
-      - var dayName = check.format('dddd');
-      - var daysName = moment.weekdays();
-      - var monthLength = moment().daysInMonth();
-      - var weekDay = moment().weekday();
-      - var index = 1;
-      #container
-        header
-          h1 #{dayName} #{dayNum}
-          h2 #{month}, #{year}
-        #headings
-          ul
-            each val in daysName
-              li= val
-        section
-          while index <= monthLength
-            if index == dayNum
-              div(class="today")= index++
-            else
-              div= index++
+  .row
+    .col-sm-11.mx-auto.my-2.text-center
+      .row.justify-content-between
+        .col-4
+          h2 November, 2017
+        .col-4
+          p Week
+      .row.h-100
+        - var daysName = moment.weekdays();
+        each val in daysName
+          .col.week.day
+            -var week = moment().week();
+            -var thisWeek = moment().day(val).week(week);
+            -var thisDay = moment(thisWeek).format('dd D');
+            p.day= thisDay
+            .event
+              
